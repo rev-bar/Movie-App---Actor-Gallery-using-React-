@@ -4,7 +4,15 @@
 
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
+}
+.p-actors {
+    width: 100%;
+}
+.p-actors-search{
+    margin-top: 10px;
+    padding: 0;
     width: 100%;
 }

@@ -1,5 +1,7 @@
-// import Actor from "../../model/Actor";
+import { Card, Container } from 'react-bootstrap';
+import './ActorCard.css';
 
+// import Actor from "../../model/Actor";
 // import { Card } from "react-bootstrap";
 
 
@@ -10,14 +12,17 @@ function ActorCard(props) {
     // console.log(fullName);
 
     return (
-
-        <div className="card">
-            <img  className="card card-img-top" src={imageUrl} alt= "" ></img>
-            <div>
-                <p className= "text-center">  <a href= {imdbUrl}>{fullName }</a></p>
+    
+        <Card>
+            <Card.Img variant="top" variant="top" src={imageUrl}></Card.Img>
+            <Card.Body>
+                <p className= "text-center">  <a href= {imdbUrl}>{fullName}</a></p>
                 <p className= "text-center">"Age: "{age}</p>
-            </div>
-        </div>
+            </Card.Body>
+
+        </Card>
+
+
 
         
     );

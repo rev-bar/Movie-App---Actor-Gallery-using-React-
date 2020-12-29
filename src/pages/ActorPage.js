@@ -1,3 +1,4 @@
+import { Container, Row } from 'react-bootstrap';
 import ActorCard from '../components/ActorCard/ActorCard';
 import './ActorPage.css';
 
@@ -5,8 +6,8 @@ import './ActorPage.css';
 function ActorsPage(){
 
 return (
-<div className= "container">
-    <div className= "row flex">
+<Container className= "p-actors ">
+    <Row className= "flex">
         <ActorCard
         fname ="Gal" 
         lname = "Gadot"
@@ -28,9 +29,8 @@ return (
         imdbUrl= "https://www.imdb.com/name/nm2933757/"
         age = "40"   
         />
-        
-    </div>
-</div>
+    </Row>
+</Container>
 
 )
 

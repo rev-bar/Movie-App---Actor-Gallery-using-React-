@@ -1,4 +1,4 @@
-import { Card, Container } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 import './ActorCard.css';
 
 // import Actor from "../../model/Actor";
@@ -17,7 +17,7 @@ function ActorCard(props) {
             <Card.Img variant="top" variant="top" src={imageUrl}></Card.Img>
             <Card.Body>
                 <p className= "text-center">  <a href= {imdbUrl}>{fullName}</a></p>
-                <p className= "text-center">"Age: "{age}</p>
+                <p className= "text-center">Age: {age}</p>
             </Card.Body>
 
         </Card>

@@ -13,7 +13,7 @@ function ActorCard(props) {
 
     return (
     
-        <Card>
+        <Card xs={12} spacing={3}>
             <Card.Img variant="top" variant="top" src={imageUrl}></Card.Img>
             <Card.Body>
                 <p className= "text-center">  <a href= {imdbUrl}>{fullName}</a></p>

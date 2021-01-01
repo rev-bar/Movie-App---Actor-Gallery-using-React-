@@ -31,8 +31,8 @@ const [actorText ,setActorText] = useState("");
 function FilterActors (e){
       setActorText(e.target.value);
 }
+                                                     
 
-                                                      
 const filteredActores = actorsData.filter(actor => actor.fname.toLowerCase().includes( actorText.toLowerCase()) ||  actor.lname.toLowerCase().includes( actorText.toLowerCase())  )
 
 const actorGllery =filteredActores.map((item, index) => <ActorCard

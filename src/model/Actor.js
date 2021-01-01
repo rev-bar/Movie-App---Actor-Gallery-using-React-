@@ -6,7 +6,7 @@ class Actor {
             this.lname = palinActorOrfname.lname;    
             this.imageUrl = palinActorOrfname.imageUrl;
             this.imdbUrl = palinActorOrfname.imdbUrl;
-            this.age = age;
+            this.age = palinActorOrfname.age;
         } else{
             this.fname = palinActorOrfname;
             this.lname = lname;    

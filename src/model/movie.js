@@ -1,6 +1,6 @@
 class Movie {
     constructor(palinMovieOrName,length,poster,director,stars) {
-        if (typeof palinActorOrfname === 'object' ){
+        if (typeof palinMovieOrName === 'object' ){
 
             this.movieName = palinMovieOrName.fname;
             this.length = palinMovieOrName.length;    

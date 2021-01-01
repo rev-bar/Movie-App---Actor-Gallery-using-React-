@@ -1,0 +1,28 @@
+[ {
+    "fname":"Brad",
+    "lname" :"Pitt",
+    "imageUrl" : "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+    "imdbUrl":"https://www.imdb.com/name/nm0000093/",
+    "age": 57
+},
+{
+    "fname": "Daniel", 
+    "lname": "Day-Lewis",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjE2NDY2NDc1Ml5BMl5BanBnXkFtZTcwNjAyMjkwOQ@@._V1_UY317_CR13,0,214,317_AL_.jpg" , 
+    "imdbUrl":     "https://www.imdb.com/name/nm0000358/" ,
+    "age": 63
+},
+{
+    "fname": "Gal", 
+    "lname": "Gadot",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjUzZTJmZDItODRjYS00ZGRhLTg2NWQtOGE0YjJhNWVlMjNjXkEyXkFqcGdeQXVyMTg4NDI0NDM@._V1_UY317_CR51,0,214,317_AL_.jpg" , 
+    "imdbUrl": "https://www.imdb.com/name/nm2933757/" ,
+    "age": 40
+}
+
+]
+
+
+
+
+

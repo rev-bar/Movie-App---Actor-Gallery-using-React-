@@ -1,11 +1,20 @@
 class Actor {
-    constructor(fname,lname,imageUrl,imdbUrl,age) {
-        this.fname = fname;
-        this.lname = lname;    
-        this.imageUrl = imageUrl;
-        this.imdbUrl = imdbUrl;
-        this.age = age;
+    constructor(palinActorOrfname,lname,imageUrl,imdbUrl,age) {
+        if (typeof palinActorOrfname === 'object' ){
+
+            this.fname = palinActorOrfname.fname;
+            this.lname = palinActorOrfname.lname;    
+            this.imageUrl = palinActorOrfname.imageUrl;
+            this.imdbUrl = palinActorOrfname.imdbUrl;
+            this.age = age;
+        } else{
+            this.fname = palinActorOrfname;
+            this.lname = lname;    
+            this.imageUrl = imageUrl;
+            this.imdbUrl = imdbUrl;
+            this.age = age;
         }
+    }
   
 }
 

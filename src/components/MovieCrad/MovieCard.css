@@ -1,0 +1,10 @@
+.c-movie{
+background-color: rgb(19, 139, 133);
+margin: 10px;
+padding: 5px;
+width: 50%;
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}

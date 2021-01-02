@@ -1,23 +1,23 @@
 [ {
-    "movieName":"Brad",
-    "length" :"Pitt",
-    "poster" : "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg",
-    "director":"https://www.imdb.com/name/nm0000093/",
-    "stars": 57
+    "movieName":"The Godfather",
+    "length" :175,
+    "poster" : "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR3,0,182,268_AL_.jpg",
+    "director":"Francis Ford Coppola",
+    "stars": "Marlon Brando, Al Pacino, James Caan "
 },
 {
-    "movieName": "Daniel", 
-    "length": "Day-Lewis",
-    "poster": "https://m.media-amazon.com/images/M/MV5BMjE2NDY2NDc1Ml5BMl5BanBnXkFtZTcwNjAyMjkwOQ@@._V1_UY317_CR13,0,214,317_AL_.jpg" , 
-    "director":     "https://www.imdb.com/name/nm0000358/" ,
-    "stars": 63
+    "movieName":"Home Alone",
+    "length" :103,
+    "poster" : "https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "director":"Chris Columbus",
+    "stars": "Macaulay Culkin, Joe Pesci, Daniel Stern"
 },
 {
-    "movieName": "Gal", 
-    "length": "Gadot",
-    "poster": "https://m.media-amazon.com/images/M/MV5BMjUzZTJmZDItODRjYS00ZGRhLTg2NWQtOGE0YjJhNWVlMjNjXkEyXkFqcGdeQXVyMTg4NDI0NDM@._V1_UY317_CR51,0,214,317_AL_.jpg" , 
-    "director": "https://www.imdb.com/name/nm2933757/" ,
-    "stars": 40
+    "movieName":"Die Hard",
+    "length" :132,
+    "poster" : "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "director":"John McTiernan",
+    "stars": "Bruce Willis, Alan Rickman, Bonnie Bedelia "
 }
 
 ]

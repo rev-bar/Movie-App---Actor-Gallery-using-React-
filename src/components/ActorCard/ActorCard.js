@@ -1,15 +1,10 @@
 import { Card} from 'react-bootstrap';
 import './ActorCard.css';
 
-// import Actor from "../../model/Actor";
-// import { Card } from "react-bootstrap";
-
-
 function ActorCard(props) {
 
     const {fname,lname,imageUrl,imdbUrl,age} = props;
     const fullName = fname +" " + lname;
-    // console.log(fullName);
 
     return (
     
@@ -21,9 +16,6 @@ function ActorCard(props) {
             </Card.Body>
 
         </Card>
-
-
-
         
     );
   }

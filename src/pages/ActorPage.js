@@ -1,11 +1,10 @@
-
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Container, Form, Row } from 'react-bootstrap';
 import ActorCard from '../components/ActorCard/ActorCard';
+import MovieCard from '../components/MovieCrad/MovieCard';
 import Actor from '../model/Actor';
 import Movie from '../model/movie';
-
 import './ActorPage.css';
 
 
@@ -15,15 +14,13 @@ const [actorsData,setActorsData] = useState([]);
 const [actorText ,setActorText] = useState("");
 const [moviesData,setMoviesData] = useState([]);
 
-
 useEffect ( ()=> {
       axios.get("actors.json").then(res => setActorsData (res.data.map(singleActor => new Actor (singleActor)) ))
-})
+},[])
 
 useEffect ( ()=> {
       axios.get("movies.json").then(res => setMoviesData (res.data.map(singleMovie => new Movie (singleMovie)) ))
-})
-
+},[])
 
 
 // const actor1 = new Actor ("Brad","Pitt","https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0000093/",57)
@@ -36,15 +33,13 @@ useEffect ( ()=> {
       
 // const [actorsData, setActorsData] = useState([actor1, actor2, actor3] );
 
-
-
-function FilterActors (e){
+                              
+ //filtering actors data
+ function FilterActors (e){
       setActorText(e.target.value);
 }
-                                                     
- 
-//filtering actors data
 const filteredActores = actorsData.filter(actor => actor.fname.toLowerCase().includes( actorText.toLowerCase()) ||  actor.lname.toLowerCase().includes( actorText.toLowerCase())  )
+
 // Converting data (state + props) into presentation (jsx)
 const actorGllery =filteredActores.map((item, index) => <ActorCard
                                             key= {index}                                        
@@ -55,29 +50,29 @@ const actorGllery =filteredActores.map((item, index) => <ActorCard
                                             age = {item.age}  
                                         /> )
 
-const moviesGllery =moviesData.map((item, index) => <ActorCard
-                                        key= {index}                                        
-                                        fname ={item.movieName} 
-                                        lname = {item.length}
-                                        imageUrl = {item.poster}  
-                                        imdbUrl= {item.director}
-                                        age = {item.stars}  
-                                    /> ) 
-
+const moviesGllery =moviesData.map((item, index) => <MovieCard
+                                        key= {index}                                                                        
+                                        movieName ={item.movieName} 
+                                        length = {item.length}
+                                        poster = {item.poster}  
+                                        director= {item.director}
+                                        stars = {item.stars}  
+                  /> ) 
                                       
 return (
-<Container className= "p-actors">
-<Form.Group >
-    <Form.Control  value = {actorText} onChange= {FilterActors } as="textarea" className= "p-actors-search" placeholder= "Search" />
-  </Form.Group>
-    <Row className= "flex">
-        
-    {/* {actorGllery} */}
-    {moviesGllery}
-    
-    </Row>
-</Container>
-
+<div className= "p-actors">
+      <Row className= "flex">
+            <Form.Group className= "p-actors-search" >
+                  <Form.Control  value = {actorText} onChange= {FilterActors } as="textarea" className= "p-actors-search" placeholder= "Search" />
+            </Form.Group>
+      </Row>
+      <Row className= "flex">  
+            {actorGllery}
+      </Row>
+      <Row className= "flex">  
+            {moviesGllery}
+      </Row>
+</div>
 )
 
 }

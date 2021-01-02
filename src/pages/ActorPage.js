@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Container, Form, Row } from 'react-bootstrap';
 import ActorCard from '../components/ActorCard/ActorCard';
 import MovieCard from '../components/MovieCrad/MovieCard';
+import SearchBox from '../components/SearchBox/SearchBox';
 import Actor from '../model/Actor';
 import Movie from '../model/movie';
 import './ActorPage.css';
@@ -13,6 +14,7 @@ function ActorsPage(){
 const [actorsData,setActorsData] = useState([]);
 const [actorText ,setActorText] = useState("");
 const [moviesData,setMoviesData] = useState([]);
+const [movieText, setMovieText]= useState("");
 
 useEffect ( ()=> {
       axios.get("actors.json").then(res => setActorsData (res.data.map(singleActor => new Actor (singleActor)) ))
@@ -63,11 +65,14 @@ return (
 <div className= "p-actors">
       <Row className= "flex">
             <Form.Group className= "p-actors-search" >
-                  <Form.Control  value = {actorText} onChange= {FilterActors } as="textarea" className= "p-actors-search" placeholder= "Search" />
+                  <Form.Control  value = {actorText} onChange= {FilterActors } as="textarea" className= "p-actors-search" placeholder= "Search actor" />
             </Form.Group>
       </Row>
       <Row className= "flex">  
             {actorGllery}
+      </Row>
+      <Row className= "flex">
+            <SearchBox placeholder= "Search movie" value= {movieText} onSearchChange ={value => setMovieText(value)}/>
       </Row>
       <Row className= "flex">  
             {moviesGllery}

@@ -72,7 +72,7 @@ return (
             {actorGllery}
       </Row>
       <Row className= "flex">
-            <SearchBox placeholder= "Search movie" value= {movieText} onSearchChange ={value => setMovieText(value)}/>
+            <SearchBox placeholder= "Search movie" value= {movieText} onSearchChange ={value => setMovieText(value)} results = {["a" , "b"]}/>
       </Row>
       <Row className= "flex">  
             {moviesGllery}

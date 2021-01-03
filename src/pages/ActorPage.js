@@ -15,6 +15,7 @@ const [actorsData,setActorsData] = useState([]);
 const [actorText ,setActorText] = useState("");
 const [moviesData,setMoviesData] = useState([]);
 const [movieText, setMovieText]= useState("");
+const [results, setResults]= useState(["a","b"]);
 
 useEffect ( ()=> {
       axios.get("actors.json").then(res => setActorsData (res.data.map(singleActor => new Actor (singleActor)) ))
@@ -52,6 +53,16 @@ const actorGllery =filteredActores.map((item, index) => <ActorCard
                                             age = {item.age}  
                                         /> )
 
+//presenting movies results:
+function AddMovie (index){
+return (
+      // alert(results[index])
+      setMoviesData(moviesData.concat(new Movie(results[index])))
+
+)
+
+}
+
 const moviesGllery =moviesData.map((item, index) => <MovieCard
                                         key= {index}                                                                        
                                         movieName ={item.movieName} 
@@ -72,7 +83,7 @@ return (
             {actorGllery}
       </Row>
       <Row className= "flex">
-            <SearchBox placeholder= "Search movie" value= {movieText} onSearchChange ={value => setMovieText(value)} results = {["a" , "b"]}/>
+            <SearchBox placeholder= "Search movie" value= {movieText} onSearchChange ={value => setMovieText(value)} results = {results} onResultSelected={AddMovie}/>
       </Row>
       <Row className= "flex">  
             {moviesGllery}
